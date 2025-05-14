@@ -37,8 +37,14 @@
 .carousel-track {
     display: flex;
     gap: 0;
-    animation: scroll 30s linear infinite;
     margin-top: -20px;
+}
+
+/* Animation will be added dynamically after images have pre-loaded */
+
+/* Active scrolling state */
+.carousel-track.animate {
+    animation: scroll 30s linear infinite;
 }
 
 @keyframes scroll {

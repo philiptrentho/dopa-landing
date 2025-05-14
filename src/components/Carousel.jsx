@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Carousel.css';
 import c1 from '../assets/1.png';
 import c2 from '../assets/2.png';
@@ -12,7 +12,7 @@ import c9 from '../assets/8.png';
 // Import new album art assets
 import mgmtArt from '../assets/mgmt.png';
 import djoArt from '../assets/djo.png';
-import pinkArt from '../assets/pink.png'; // Assuming P!nk maps to Pink.png
+import pinkArt from '../assets/pink.png';
 import billyJoelArt from '../assets/billyjoel.png';
 import katyPerryArt from '../assets/katyperry.png';
 import dominicFikeArt from '../assets/dominicfike.png';
@@ -48,7 +48,49 @@ const songs = [
     { art: szaArt, title: 'Prom', artist: 'SZA' },
 ];
 
+// Combine all visual assets so we can preload them before the carousel begins animating
+const allImageSources = [
+    ...new Set([
+        // Card images
+        ...[c1, c2, c3, c4, c5, c6, c8, c9],
+        // Song arts
+        mgmtArt,
+        djoArt,
+        pinkArt,
+        billyJoelArt,
+        katyPerryArt,
+        dominicFikeArt,
+        mileyCyrusArt,
+        drakeArt,
+        szaArt,
+    ]),
+];
+
 export default function Carousel() {
+    const [assetsLoaded, setAssetsLoaded] = useState(false);
+
+    // Pre-load all images once on mount so that the carousel starts smoothly.
+    useEffect(() => {
+        let loadedCount = 0;
+
+        allImageSources.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+
+            const markLoaded = () => {
+                loadedCount += 1;
+                if (loadedCount === allImageSources.length) {
+                    setAssetsLoaded(true);
+                }
+            };
+
+            img.onload = markLoaded;
+            img.onerror = markLoaded; // Still count failures to avoid stalling
+        });
+    }, []);
+
+    const trackClass = assetsLoaded ? 'carousel-track animate' : 'carousel-track';
+
     return (
         <section className="carousel-wrapper">
             <header className="carousel-header">
@@ -56,7 +98,7 @@ export default function Carousel() {
                 <p>Sunday, May 4th</p>
             </header>
             <div className="carousel-container">
-                <div className="carousel-track">
+                <div className={trackClass}>
                     {items.concat(items).map((src, index) => {
                         const song = songs[index % songs.length];
                         const label = labels[index % labels.length];
