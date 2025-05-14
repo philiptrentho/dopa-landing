@@ -10,7 +10,7 @@ import c8 from '../assets/7.png';
 import c9 from '../assets/8.png';
 
 // Import new album art assets
-import mgmtArt from '../assets/MGMT.png';
+import mgmtArt from '../assets/mgmt.png';
 import djoArt from '../assets/Djo.png';
 import pinkArt from '../assets/Pink.png'; // Assuming P!nk maps to Pink.png
 import billyJoelArt from '../assets/BillyJoel.png';
