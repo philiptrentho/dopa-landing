@@ -1,0 +1,134 @@
+.carousel-wrapper {
+    color: #fff;
+    background: #000;
+    padding: 32px 0;
+    overflow: hidden;
+}
+
+.carousel-header {
+    padding: 0 16px 24px;
+}
+
+.carousel-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'SF Pro Rounded', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.carousel-header p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #b0b0b0;
+    font-weight: 400;
+    margin-top: -2px;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    background: #1d1d1d;
+    /* gray container */
+    display: flex;
+    justify-content: center;
+    /* Center the carousel-track horizontally */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 0;
+    animation: scroll 30s linear infinite;
+    margin-top: -20px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    margin: 0;
+    margin-right: -30px;
+    display: flex;
+    /* center card horizontally inside item width */
+    justify-content: center;
+}
+
+.card {
+    background: transparent;
+    border-radius: 0;
+    width: 140px;
+    overflow: visible;
+    /* allow song overlay to extend */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* anchor song overlay */
+    font-family: 'SF Pro Rounded', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.card-header {
+    padding: 12px 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    /* reduced gap between lines */
+    margin-bottom: 10px;
+    /* increased space above the image */
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sub {
+    font-size: 12px;
+    color: #b0b0b0;
+    white-space: nowrap;
+    margin-top: -2px;
+}
+
+.card-img {
+    margin-left: 12px;
+    /* keep text alignment indentation */
+    width: calc(100% - 12px);
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding: 8px 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+}
+
+.track {
+    font-size: 12px;
+}
+
+.icon {
+    font-size: 12px;
+}
+
+/* Song overlay styles */
+.song-overlay {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% + 6px);
+    /* Center relative to the indented image */
+    /* transform: translate(-50%, 50%); */
+    /* Original: center of song at image bottom */
+    transform: translate(-50%, -26px);
+    /* New: move up by 40px from original position (14px - 40px = -26px) */
+}

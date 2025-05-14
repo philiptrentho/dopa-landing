@@ -1,0 +1,48 @@
+.song {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 4px 8px 4px 4px;
+    height: 28px;
+    min-width: 100px;
+    font-family: 'SF Pro Rounded', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    margin-top: -40px;
+    max-height: 20px;
+}
+
+.song-art {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+    margin-left: 6px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.song-title {
+    font-weight: 600;
+}
+
+.song-artist {
+    color: #3c3c3c;
+    margin-left: 3px;
+}
+
+.song-icon {
+    margin-left: auto;
+    font-size: 14px;
+}
