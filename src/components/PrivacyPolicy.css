@@ -1,0 +1,47 @@
+.privacy-policy-container {
+    background: #000;
+    color: #fff;
+    padding: 40px;
+    min-height: 100vh;
+    font-family: 'SF Pro Rounded', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.back-button {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.privacy-policy-container h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.privacy-content {
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.privacy-content h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.privacy-content p {
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}

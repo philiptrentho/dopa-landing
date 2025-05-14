@@ -7,12 +7,15 @@
 
 .carousel-header {
     padding: 0 16px 24px;
+
 }
 
 .carousel-header h2 {
     margin: 0;
     font-size: 24px;
     font-weight: 600;
+    color: #cdcdcd;
+
     font-family: 'SF Pro Rounded', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
