@@ -11,14 +11,14 @@ import c9 from '../assets/8.png';
 
 // Import new album art assets
 import mgmtArt from '../assets/mgmt.png';
-import djoArt from '../assets/Djo.png';
-import pinkArt from '../assets/Pink.png'; // Assuming P!nk maps to Pink.png
-import billyJoelArt from '../assets/BillyJoel.png';
-import katyPerryArt from '../assets/KatyPerry.png';
-import dominicFikeArt from '../assets/DominicFike.png';
-import mileyCyrusArt from '../assets/MileyCyrus.png';
-import drakeArt from '../assets/Drake.png';
-import szaArt from '../assets/SZA.png';
+import djoArt from '../assets/djo.png';
+import pinkArt from '../assets/pink.png'; // Assuming P!nk maps to Pink.png
+import billyJoelArt from '../assets/billyjoel.png';
+import katyPerryArt from '../assets/katyperry.png';
+import dominicFikeArt from '../assets/dominicfike.png';
+import mileyCyrusArt from '../assets/mileycyrus.png';
+import drakeArt from '../assets/drake.png';
+import szaArt from '../assets/sza.png';
 
 import Song from './Song';
 
